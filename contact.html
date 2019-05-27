@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact | Rain Cinco</title>
+	
+	<meta name="description" content="CONTACT PAGE for Rain Cinco's creative portfolio. USC Class of 2019, B.S. Electrical Engineering. Currently working on Game Design in Unity3D as well as Internet of Things projects.">
+
+	<link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+
+	<link rel="stylesheet" href="main.css">
+
+	<style>
+		h2{
+			padding:0px;
+		}
+		#dogs{
+			float:right;
+			width:200px;
+			height:auto;
+		}
+		#msg{
+			height:200px;
+			width: 390px;
+			font-size: 1em;
+			margin-top: 20px;
+		}
+		#form{
+			width:600px;
+			padding:0px 180px;
+			float:right;
+		}
+		.form-row{
+			margin:10px 0px;
+		}
+		.main-label{
+			/*creates a two-column layout*/
+			display:block;
+			width:200px;
+			float:left;
+		}
+		.icon{
+			width:20px;
+			height:auto;
+			position: relative;
+			top: 5px;
+			margin: 0px;
+			margin-left: 10px;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="banner">	
+		<div class="wrapper">
+			<div id="nav">
+				<a href="index.html" id="home">RAIN CINCO</a>
+				<a href="about.html" id="about">ABOUT</a>
+				<a href="games.html" id="games">GAMES</a>
+				<a href="iot.html" id="iot">ENGINEERING</a>
+				<a href="contact.html" id="contact">CONTACT</a>	
+			</div>
+		</div>
+
+		<div class="clearfloat"></div>
+	</div>
+
+	<div class="main">
+		<div class="wrapper">
+			<div id="fade-down">
+				<div id="form">
+				<img src="img/doggy.gif" alt="Dogs high fiving" id="dogs">
+				<h2>LET'S CHAT</h2>
+				<p>Other ways to contact me:
+					<a href="mailto:rcinco@usc.edu" ><img src="img/mail_icon.png" alt="E-Mail" class="icon"></a>
+					<a href="https://facebook.com/precipitation5" ><img src="img/fb_icon.png" alt="Facebook" class="icon"></a>
+					<a href="https://instagram.com/raincinco" ><img src="img/ig_icon.png" alt="Instagram" class="icon"></a>
+					<a href="https://www.linkedin.com/in/raincinco/" ><img src="img/linkedin_icon.png" alt="LinkedIn" class="icon"></a></p>
+
+					<form action="confirmation.html">
+
+						<div class="form-row">
+							<label for="name-id" class="main-label">Name:</label>
+							<input type="text" id="name-id">
+						</div> <!-- form-row -->
+
+						<div class="form-row">
+							<label for="email" class="main-label">Email:</label>
+							<input type="text" id="email">
+						</div> <!-- form-row -->
+
+						<div class="form-row">
+							<label for="msg" class="main-label">Your Message:</label>
+							<textarea id="msg" ></textarea>
+						</div>
+
+						<div class="form-row">
+							<button type="submit" id="submit-btn">Submit</button>
+							<button type="reset">Clear Form</button>
+						</div> <!-- form-row -->
+
+				</form>
+			</div>
+		</div>
+		</div>
+	</div>
+</body>
+</html>

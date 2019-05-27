@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Games | Rain Cinco</title>
+
+	<meta name="description" content="GAME PORTFOLIO of Rain Cinco: USC Class of 2019, B.S. Electrical Engineering. Currently working on Game Design in Unity3D as well as Internet of Things projects.">
+
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+	<link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+
+	<link rel="stylesheet" href="main.css">
+
+	<style>
+		body{
+			color:white;
+			position:fixed;
+			background-image: url('img/black_bg.jpg');
+		}
+		img{
+			height: calc(100vh - 90px);
+			width:auto;
+			float:right;
+			margin-left: 50px;
+		}
+		h1{
+			text-shadow: none;
+			margin:0px;
+			text-align: left;
+		}
+		.front{
+			width: calc(400vw + 80px);
+		}
+		#splash-screen{
+			background-color: #507D3F;
+		}
+		#project1{
+		 	background-color: #3D315B;
+		}
+		#project2{
+		 	background-color: slategrey;
+		}
+		#project3{
+		 	background-color: darkgrey;
+		}
+
+	</style>
+
+</head>
+
+<body onload="showLoader()">
+
+	
+	<div id="fakeLoader"></div>
+	<div id="fakeLoaderText">LOADING PORTFOLIO...</div>
+
+	<div id="onLoad">
+		<div id="banner">	
+			<div class="wrapper">
+				<div id="nav">
+					<a href="index.html" id="home">RAIN CINCO</a>
+					<a href="about.html" id="about">ABOUT</a>
+					<a href="games.html" id="games">GAMES</a>
+					<a href="iot.html" id="iot">ENGINEERING</a>
+					<a href="contact.html" id="contact">CONTACT</a>	
+
+				</div>
+			</div>
+
+			<div class="clearfloat"></div>
+		</div>
+
+		<div class="main">
+	<!-- 		<div class="horizon scroll">
+		        <img src="img/horizon.png" alt="parallax shadow">
+		    </div> -->
+	<!-- 	    <div class="middle scroll">
+		    	<img src="img/middle.png" alt="parallax shadow">
+		    </div> -->
+		    <div class="front scroll">
+
+		    	<div class="container" id="splash-screen">
+					<div class="wrapper">
+		        		<div id="fade-down">
+			        		<div id="splash-text">
+			        			<h2>GAMES</h2>
+			        			<p>I took Introduction to Game Development in my final semester. I had wanted to take it for two years before that, and when I finally got there I loved every second of it. Since then, I've been hooked on bringing my stories and art to life via video games.</p>
+			        			<p id="dumb"><em>Scroll up and down</em> &#x21c9;</p>
+			        		</div>
+			        	</div>
+		        	</div>
+		        </div>
+
+		        <div class="container" id="project1">
+					<img src="img/frogger_vert.png" alt="frogger">
+					<div class="description">
+						<h1>Frogger</h1>
+						<h4>SPRING 2019</h4>
+						<p>One of my first Unity projects ever was recreating the SEGA arcade classic <em>Frogger</em>. What you see is what you get: deadly cars,
+						fast-moving logs, and turtles that sink underground when you least expect it.</p>
+        			</div>
+		        </div>
+
+		        <div class="container" id="project2">
+					<img src="img/sundae_stacker.png" alt="sundae stacker">
+					<div class="description">
+						<h1>Sundae Stacker</h1>
+						<h4>SPRING 2019</h4>
+						<p>In my first attempt at mobile game design, I take the simple act of stacking ice cream scoops and give it a new personality, <em>a la Candy Crush</em>: nauseatingly sweet and strangely infuriating.</p>
+        			</div>
+		        </div>
+
+		        <div class="container" id="project3">
+					<div class="wrapper">
+						<h2>COMING SOON...</h2>
+					</div>
+		        </div>
+
+		    </div>
+		</div>
+	</div>
+
+    <!-- ----- jInvertScroll ----- -->
+	<script type="text/javascript" src="jInvertScroll/js/jquery.jInvertScroll.js"></script>
+	<script type="text/javascript">
+    (function($) {
+        $.jInvertScroll(['.scroll'],        // an array containing the selector(s) for the elements you want to animate
+            {
+            // height: 6000,                   // optional: define the height the user can scroll, otherwise the overall length will be taken as scrollable height
+            onScroll: function(percent) {   //optional: callback function that will be called when the user scrolls down, useful for animating other things on the page
+                console.log(percent);
+            }
+        });
+    }(jQuery));
+    </script>
+    <!-- ----- when page refreshes, scrolls to beginning ----- -->
+    <script type="text/javascript">
+    	window.onbeforeunload = function () {
+		window.scrollTo(0, 0);    
+	}
+	</script>
+	<!-- page loads in after javascript -->
+    <script>
+		var x;
+
+		function showLoader() {
+			x = setTimeout(showPage, 2000);
+		}
+		function showPage() {
+			document.getElementById("fakeLoader").style.display="none";
+			document.getElementById("fakeLoaderText").style.display="none";
+			document.getElementById("onLoad").style.display="block";
+			document.body.style.position="static";
+		}
+	</script>
+</body>
+</html>

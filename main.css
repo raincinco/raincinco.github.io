@@ -1,0 +1,237 @@
+/*Main CSS*/
+
+/* ----- Animations ----- */
+
+@keyframes fadedown {
+	from {bottom: 100px; opacity: 0;}
+	to {bottom: 0px; opacity: 1.0;}
+}
+@keyframes fadeup{
+	from {top: 50px; opacity: 0;}
+	to {top: 0px; opacity: 1.0;}
+}
+@keyframes fadein{
+	from {opacity: 0;}
+	to {opacity: 1.0;}
+}
+#fade-down{
+	position:relative;
+	opacity: 1.0;
+	animation: fadedown 1s;
+}
+#fade-up{
+	position:relative;
+	opacity: 1.0;
+	animation: fadeup 1s;
+}
+
+/* ----- General formatting used across many pages ----- */
+
+body{
+	margin: 0px;
+	/*background-image:*/
+	background-image: url('img/bg.jpg');
+	background-attachment:  fixed;
+	background-size: cover;
+	background-color: #FFF3DA;
+	font-family: Helvetica, sans-serif;
+	font-weight: lighter;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+h1{
+	font-family:Dosis, sans-serif;
+	text-align: center;
+	font-size:5em;
+	text-shadow: 2px 2px 2px grey;
+	padding-top: 50px;
+}
+h2{
+	font-family:Dosis, sans-serif;
+	font-size: 3em;
+	padding-top: 50px;
+}
+#splash-text{
+	width:480px;
+	margin:auto;
+	text-align:center;
+}
+.wrapper{
+	width:960px;
+	margin-right: auto;
+	margin-left: auto;
+	line-height: 45px;
+}
+.clearfloat{
+	clear: both;
+}
+.main{
+	padding-top: 90px;
+}
+#onLoad{
+	display:none;
+	animation:fadein 0.5s;
+}
+
+/* -----  Banner CSS ----- */
+
+#nav a {
+	display: block;
+	float:left;
+	text-align:center;
+	color: white;
+	text-decoration: none;
+	font-family: Dosis, serif;
+	font-size:0.9em;
+	width: 80px;
+	height: 90px;
+	line-height: 90px;
+	margin: 0px 10px;
+}
+#nav > #home{
+	font-size: 2em;
+	width: 150px;
+	margin-left:0px;
+}
+#nav > #home:hover{
+	color:mediumpurple;
+}
+#banner{
+	background-color: #000;
+	height:90px;
+	line-height: 90px;
+	margin-bottom: 20px;
+	font-family: Dosis, sans-serif;
+	position:fixed;
+	width:100%;
+	z-index: 5;
+}
+
+/* ----- Buttons and Icons ----- */
+
+#button{
+	text-decoration: none;
+	color:black;
+	font-size: 1.2em;
+	font-family: Dosis, sans-serif;
+	text-align: center;
+	vertical-align: middle;
+	display: block;
+}
+#about:hover{
+	color:#FF529A;
+}
+#games:hover{
+	color:#56F26B;
+}
+#iot:hover{
+	color:#25C5FF;
+}
+#contact:hover{
+	color:orange;
+}
+.icon{
+	height: 30px;
+	width: auto;
+	margin: 0px 5px;
+}
+.icon:hover{
+	box-shadow: 2px 2px 2px grey;
+	border-radius: 15px;
+}
+
+/*----- jInvertScroll -----*/
+
+/**
+  * important: keep position fixed, you can however use top:0 instead of bottom:0
+  * if you want to make it stick to the top of the browser
+  */
+.scroll
+{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+/**
+  * z-index ordering of the different layers, do this for your layers,
+  * also assign absolute width (to prevent issues if the script gets executed before the images get loaded)
+  */
+
+   /*----- horizon and middle not currently used ----- */
+.horizon
+{
+  	z-index: 1;
+  	width: 3000px;
+}
+
+.middle
+{
+    z-index: 2;
+    top:90px;
+    width: 4000px;
+}
+
+.front
+{
+    z-index: 3;
+    top:90px;
+    /*width is edited in games and iot internal CSS*/
+    /*width: 100%*/
+}
+
+/*----- CSS FOR CONTAINERS -----*/
+
+.container{
+	position:relative;
+	width: 100vw;
+	height: 100vh;
+	float:left;
+	margin-right: 20px;
+}
+.container .wrapper{
+	text-align:left;
+	width:80%;
+}
+.description{
+	padding-left: 50px;
+}
+.description p{
+	line-height: 45px;
+}
+
+/*----- Loader -----*/
+#fakeLoader {
+	display:block;
+    position: relative;
+    left: 50vw;
+    top: 50vh;
+    z-index: 6;
+    width: 100vw;
+    height: 100vh;
+    /*margin centers the loader*/
+    margin: -75px 0 0 -75px;
+    border: 2px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 2px solid #a86be5;
+    width: 100px;
+    height: 100px;
+    animation: spin 0.5s linear infinite;
+}
+
+#fakeLoaderText{
+	font-family: Dosis, sans-serif;
+	position:relative;
+	left:50vw;
+	top:55vh;
+	font-size: 0.8em;
+	margin-left: -75px;
+}
+
+#dumb{
+	font-size:0.6em;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
